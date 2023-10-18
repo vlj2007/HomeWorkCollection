@@ -6,6 +6,7 @@ public class Main {
         task1();
         task2();
         task3();
+        task4();
     }
 
     public static void task1() {
@@ -35,5 +36,26 @@ public class Main {
         System.out.println(" " + strings.toString());
     }
 
+    public static void task4() {
+        System.out.println("Задание 4");
+        List<String> strings = new ArrayList<>();
+        strings.add("один");
+        strings.add("два");
+        strings.add("два");
+        strings.add("три");
+        strings.add("три");
+        strings.add("три");
 
+        Map<String, Integer> stringsTwo = new LinkedHashMap<>();
+        for (String tempString : strings) {
+            if (!stringsTwo.containsKey(tempString)) {
+                stringsTwo.put(tempString, 1);
+            } else {
+                stringsTwo.put(tempString, stringsTwo.get(tempString) + 1);
+            }
+        }
+        for (Map.Entry<String, Integer> entry : stringsTwo.entrySet()) {
+            System.out.println(" " + entry.getKey() + ": \t" + entry.getValue());
+        }
+    }
 }
