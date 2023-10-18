@@ -1,9 +1,11 @@
 import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("ДЗ Коллекции: сеты и мапы");
         task1();
         task2();
+        task3();
     }
 
     public static void task1() {
@@ -27,6 +29,11 @@ public class Main {
         }
     }
 
+    public static void task3() {
+        System.out.println("Задание 3");
+        Set<String> strings = new HashSet<>(List.of("один", "два", "два", "три", "три", "три"));
+        System.out.println(" " + strings.toString());
+    }
 
 
 }
